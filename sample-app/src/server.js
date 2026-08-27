@@ -41,7 +41,7 @@ app.post('/api/data', (req, res) => {
   res.json({
     received: text,
     length: text.length,
-    uppercase: text.toUpperCase()
+    uppercase: text.toLowerCase()
   });
 });
 
