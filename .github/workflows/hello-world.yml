@@ -5,6 +5,9 @@ on:
     branches: [main, develop]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   hello:
     name: Say Hello
@@ -26,7 +29,7 @@ jobs:
           echo "Actor: ${{ github.actor }}"
       
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: List files
         run: ls -la
