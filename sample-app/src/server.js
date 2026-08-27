@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
 app.get('/api/hello', (req, res) => {
   const name = req.query.name || 'World';
   res.json({
-    message: `Hello, ${name}!`,n    timestamp: new Date().toISOString()
+    message: `Hello, ${name}!`,
+    timestamp: new Date().toISOString()
   });
 });
 
