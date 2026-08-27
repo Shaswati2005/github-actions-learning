@@ -1,5 +1,5 @@
 const express = require('express');
-//const app = express();
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -18,8 +18,7 @@ app.get('/', (req, res) => {
 app.get('/api/hello', (req, res) => {
   const name = req.query.name || 'World';
   res.json({
-    message: `Hello, ${name}!`,
-    timestamp: new Date().toISOString()
+    message: `Hello, ${name}!`,n    timestamp: new Date().toISOString()
   });
 });
 
